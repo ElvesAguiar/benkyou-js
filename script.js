@@ -1,30 +1,17 @@
 "use  strict";
-   
+
+let name1 = "Maxwell Wright";
+let name2 = "Raja Villarreal";
+let name3 = "Helen Richards";
 
 
-const rosePrice=8;
-let roseNumber=70;
+let phone1 = "(0191) 719 6495";
+let phone2 = "0866 398 2895";
+let phone3 = "0800 1111";
 
-const lilyPrice=10;
-let lilyNumber=50;
+let email1 = "Curabitur.egestas.nunc@nonummyac.co.uk";
+let email2 = "posuere.vulputate@sed.com";
+let email3 = "libero@convallis.edu";
 
-const tulipPrice=2;
-let tulipNumber=120;
-
-let totalRosePrice =roseNumber*rosePrice;
-
-let totalLilyPrice =lilyNumber*lilyPrice;
-
-let totalTulipPrice =tulipPrice*tulipNumber;
-
-
-
-roseNumber=roseNumber-20;
-lilyNumber=lilyNumber-30;
-totalRosePrice =roseNumber*rosePrice;
-totalLilyPrice =lilyNumber*lilyPrice;
-
-console.log("Rose – unit price:"+rosePrice+" , quantity: "+roseNumber+" , value: "+totalRosePrice+
-" Lily – unit price: "+lilyPrice+" , quantity: "+lilyNumber+" , value: "+totalLilyPrice+
-" Tulip – unit price: "+tulipPrice+" , quantity: "+tulipNumber+" , value: "+totalTulipPrice+" Total: "+
-(totalLilyPrice+totalRosePrice+totalTulipPrice))
+console.log("Name: "+name1+" Phone: "+phone1+" email: "+email1);
+console.log("Name: "+name3+" Phone: "+phone3+" email: "+email3);
