@@ -1,67 +1,84 @@
-"use  strict";
+let ticket = {
+    startingStation: "Bacanga",
+    enStation: "rosario",
+    price: 37.0
+};
+
+console.log(ticket);
+
+let person = {};
+person.name = "maria";
+person.surname = "Green";
+
+console.log(person);
 /*
-let b1 = true;
-let b2 = Boolean(true);
-let n1 = 100;
-let n2 = Number(200);
-let bi1 = 100n;
-let bi2 = BigInt(200);
-let s1 = "Hello";
-let s2 = String("Hello");
-let u1 = undefined;
+let books = [];
+books[0] = {
+    title: "Speaking JavaScript",
+    author: "Axel Rauschmayer",
+    numberOfPages: 460
+};
 
-console.log(`${b1} [${typeof b1}]`);
-console.log(`${b2} [${typeof b2}]`);
-console.log(`${n1} [${typeof n1}]`);
-console.log(`${n2} [${typeof n2}]`);
-console.log(`${bi1} [${typeof bi1}]`);
-console.log(`${bi2} [${typeof bi2}]`);
-console.log(`${s1} [${typeof s1}]`);
-console.log(`${s2} [${typeof s2}]`);
-console.log(`${u1} [${typeof u1}]`);
-console.log(`O valor de b1 é: ${b1} do tipo: [${typeof b1}]`);
+books[2] = {
+    title: "Understanding ECMAScript 6",
+    author: "Nicholas C. Zakas",
+    numberOfPages: 352
+};
 
-"-------------------------------------------------------------------"
-
-let b = Boolean(BigInt(Number("1234")));
-console.log(`${b} [${typeof b}]`);
-
-"-------------------------------------------------------------------"
+books[1] = {
+    title: "Programming JavaScript Applications",
+    author: "Eric Elliott",
+    numberOfPages: 352
+};
 */
 
 
-let b1 = true + 100;
-//let b2 = true + 100n; // -> error! 
-let b3 = true + "100"; 
-//let n1 = 100 + 200n; // -> error! 
-let n2 = 100 + true; 
-let n3 = 100 + "200"; 
-//let bi1 = 100n + 200; // -> error! 
-//let bi2 = 100n + true // -> error! 
-let bi3 = 100n + "200";
-let s1 = "100" + 200;
-let s2 = "100" + 200n;
-let s3 = "100" + true;
-let s4 = "abc" + 200;
-let s5 = "abc" + 200n;
-let s6 = "abc" + true;
-console.log(`${b1} [${typeof b1}]`); // -> 101 [number]
-//console.log(`${b2} [${typeof b2}]`); // -> error! 
-console.log(`${b3} [${typeof b3}]`); // -> true100 [string] 
-//console.log(`${n1} [${typeof n1}]`); // -> error! 
-console.log(`${n2} [${typeof n2}]`); // -> 101 [number] 
-console.log(`${n3} [${typeof n3}]`); // -> 100200 [string] 
-//console.log(`${bi1} [${typeof bi1}]`); // -> error! 
-//console.log(`${bi2} [${typeof bi2}]`); // -> error! 
-console.log(`${bi3} [${typeof bi3}]`); // -> 100200 [string] 
-console.log(`${s1} [${typeof s1}]`); // -> 100200 [string] 
-console.log(`${s2} [${typeof s2}]`); // -> 100200 [string] 
-console.log(`${s3} [${typeof s3}]`); // -> 100true [string] 
-console.log(`${s4} [${typeof s4}]`); // -> abc200 [string] 
-console.log(`${s5} [${typeof s5}]`); // -> abc200 [string] 
-console.log(`${s6} [${typeof s6}]`); // -> abctrue [string]
+let books = [
+    {
+        title: "Speaking JavaScript",
+        author: "Axel Rauschmayer",
+        numberOfPages: 460
+    },
+    {
+        title: "Programming JavaScript Applications",
+        author: "Eric Elliot",
+        numberOfPages: 254
+    },
+    {
+        title: "Understanding ECMAScript 6",
+        author: "Nicholas C. Zakas",
+        numberOfPages: 352
+    }
 
-//"-------------------------------------------------------------------"
+];
 
-const str1 = 42 + Number("1");
-console.log(str1);
+console.log(books)
+
+books.push(
+    {
+        title: "Learning JavaScript Design Patterns",
+        author: "Addy Osmani",
+        numberOfPages: 254
+    }
+);
+
+
+
+console.log(books);
+
+let lastTwoBooks = books.slice(-2);
+console.log(lastTwoBooks);
+
+books.shift()
+
+console.log(`length: ${books.length}`);
+for (let i = 0; i < books.length; i++) {
+    console.log(books[i].title);
+};
+let sum = 0;
+
+for (let i = 0; i < books.length; i++) {
+    sum += books[i].numberOfPages;
+};
+
+console.log(sum);
