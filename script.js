@@ -103,18 +103,17 @@ let contacts = [
 ];
 
 let newContact = {
-    name: "Maisie Haley",
-    phone: "0913 531 3030",
-    email: "risus.Quisque@urna.ca"
 }
+
+newContact.name = window.prompt("name: ");
+newContact.phone = window.prompt("phone: ");
+newContact.email = window.prompt("email: ");
 contacts.push(newContact);
 
-console.log(`name: ${contacts[0].name} 
-phone: ${contacts[0].phone} 
-email: ${contacts[0].email}`);
+console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
 
 
-console.log(`name: ${contacts[contacts.length-1].name} 
-phone: ${contacts[contacts.length-1].phone} 
-email: ${contacts[contacts.length-1].email}`);
+console.log(`${contacts[contacts.length - 1].name} / ${contacts[contacts.length - 1].phone} / ${contacts[contacts.length - 1].email}`);
 
+alert(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
+alert(`${contacts[contacts.length - 1].name} / ${contacts[contacts.length - 1].phone} / ${contacts[contacts.length - 1].email}`);
