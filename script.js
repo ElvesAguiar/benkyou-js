@@ -1,87 +1,3 @@
-let ticket = {
-    startingStation: "Bacanga",
-    enStation: "rosario",
-    price: 37.0
-};
-
-console.log(ticket);
-
-let person = {};
-person.name = "maria";
-person.surname = "Green";
-
-console.log(person);
-/*
-let books = [];
-books[0] = {
-    title: "Speaking JavaScript",
-    author: "Axel Rauschmayer",
-    numberOfPages: 460
-};
-
-books[2] = {
-    title: "Understanding ECMAScript 6",
-    author: "Nicholas C. Zakas",
-    numberOfPages: 352
-};
-
-books[1] = {
-    title: "Programming JavaScript Applications",
-    author: "Eric Elliott",
-    numberOfPages: 352
-};
-*/
-
-
-let books = [
-    {
-        title: "Speaking JavaScript",
-        author: "Axel Rauschmayer",
-        numberOfPages: 460
-    },
-    {
-        title: "Programming JavaScript Applications",
-        author: "Eric Elliot",
-        numberOfPages: 254
-    },
-    {
-        title: "Understanding ECMAScript 6",
-        author: "Nicholas C. Zakas",
-        numberOfPages: 352
-    }
-
-];
-
-console.log(books)
-
-books.push(
-    {
-        title: "Learning JavaScript Design Patterns",
-        author: "Addy Osmani",
-        numberOfPages: 254
-    }
-);
-
-
-
-console.log(books);
-
-let lastTwoBooks = books.slice(-2);
-console.log(lastTwoBooks);
-
-books.shift()
-
-console.log(`length: ${books.length}`);
-for (let i = 0; i < books.length; i++) {
-    console.log(books[i].title);
-};
-let sum = 0;
-
-for (let i = 0; i < books.length; i++) {
-    sum += books[i].numberOfPages;
-};
-
-console.log(sum);
 
 //------------------ LAB --------------------------------------------------------//
 let contacts = [
@@ -105,15 +21,38 @@ let contacts = [
 let newContact = {
 }
 
-newContact.name = window.prompt("name: ");
-newContact.phone = window.prompt("phone: ");
-newContact.email = window.prompt("email: ");
-contacts.push(newContact);
+
 
 console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
 
 
 console.log(`${contacts[contacts.length - 1].name} / ${contacts[contacts.length - 1].phone} / ${contacts[contacts.length - 1].email}`);
 
-alert(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
-alert(`${contacts[contacts.length - 1].name} / ${contacts[contacts.length - 1].phone} / ${contacts[contacts.length - 1].email}`);
+
+
+
+let choice = Number(prompt("make a choice with the options \n 1-showing the first contact (first) \n 2-showing the last contact (last)\n 3-adding a new contact (new) "));
+
+
+switch (choice) {
+    case 1:
+        alert(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
+        break;
+    case 2:
+        alert(`${contacts[contacts.length - 1].name} / ${contacts[contacts.length - 1].phone} / ${contacts[contacts.length - 1].email}`);
+        break;
+    case 3:
+        newContact.name = window.prompt("name: ");
+        newContact.phone = window.prompt("phone: ");
+        newContact.email = window.prompt("email: ");
+
+        if ((String(newContact.name).length > 0 && newContact.name != null) && (String(newContact.phone).length > 0 && newContact.name != null) && (String(newContact.email).length > 0) && newContact.name != null) {
+            contacts.push(newContact);
+            alert(`${contacts[contacts.length - 1].name} / ${contacts[contacts.length - 1].phone} / ${contacts[contacts.length - 1].email}`);
+        };
+
+        break;
+    default:
+        console.log("invalid!")
+        break;
+}
