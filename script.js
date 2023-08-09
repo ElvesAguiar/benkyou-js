@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 //------------------ LAB --------------------------------------------------------//
 let contacts = [
@@ -57,22 +56,3 @@ switch (choice) {
         console.log("invalid!")
         break;
 }
-=======
-let firstNumber = Number(prompt("Enter first number"));
-let secondNumber = Number(prompt("Enter second number"));
-let operand = prompt("Enter operand (+, -, * or /)");
-let result;
-
-if (!Number.isNaN(firstNumber) && !Number.isNaN(secondNumber)) {
-    switch (operand) {
-        case "+": result = firstNumber + secondNumber; break;
-        case "-": result = firstNumber - secondNumber; break;
-        case "*": result = firstNumber * secondNumber; break;
-        case "/": result = firstNumber / secondNumber; break;
-        default: result = "Error: unknown operand";
-    }
-} else {
-    result = "Error: at least one of the entered values is not a number";
-}
-alert(result);
->>>>>>> 20d4b86d4d1dc11368009f482cda0ed185f583ee
